@@ -98,21 +98,21 @@ export default function HistoryPage() {
                         <table className="data-table">
                             <thead>
                                 <tr>
-                                    <th>Day</th>
-                                    <th>In</th>
-                                    <th>Out</th>
-                                    <th>Time</th>
-                                    <th>Milk</th>
+                                    <th>Date</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Duration</th>
+                                    <th>Milk Collected</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {sessions.map((session) => (
                                     <tr key={session.id}>
-                                        <td data-label="Day">{formatDate(session.start_time)}</td>
-                                        <td data-label="In">{formatTime(session.start_time)}</td>
-                                        <td data-label="Out">{formatTime(session.end_time)}</td>
-                                        <td data-label="Time">{formatSeconds(session.duration)}</td>
-                                        <td data-label="Milk">{session.milk_quantity.toFixed(1)} L</td>
+                                        <td data-label="Date">{formatDate(session.start_time)}</td>
+                                        <td data-label="Start Time">{formatTime(session.start_time)}</td>
+                                        <td data-label="End Time">{formatTime(session.end_time)}</td>
+                                        <td data-label="Duration">{formatSeconds(session.duration)}</td>
+                                        <td data-label="Milk Collected">{session.milk_quantity.toFixed(1)} L</td>
                                     </tr>
                                 ))}
                             </tbody>
